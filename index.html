@@ -1,0 +1,467 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Chalchitram</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <h1 class="logo">Chick Flicks</h1>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <li class="list-value active">Home</li>
+                    <li class="list-value" >Categories</li>
+                    <li class="list-value">Trends</li>
+                    <li class="list-value">Movies</li>
+                    <li class="list-value">Premium</li>
+                    <li> <button class = "featured-button" id = "show-login" onclick="openForm()">LOGIN</button></li> &nbsp; &nbsp;
+                    <li> <a href = "Subscription.html" target="_blank"><button class = "featured-button">SUBSCRIBE</button></a></li>
+                </ul>
+            </div>
+
+            <div class="profile-container">
+                <input type="text" class = "search-box " placeholder="Search..">
+                <img class="profile-picture" src="Profilelogo.jpg" alt="">
+                <div class="profile-text-container">
+                        <span class="profile-text">Profile</span>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            <!-- The form -->
+            <div class="form-popup" id="myForm">
+                <div class = "close-btn" onclick ="closeForm()">&times</div>
+                <form  class="form-container">
+                    <h1>Login to continue</h1><br><br>
+    
+                    <label style = "font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><b>Phone No</b></label>
+                    <input type="text" placeholder= "+91 | Enter your mobile no" name="phone" required>
+        
+                    <label style = "font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><b>Password</b></label>
+                    <input type="password" placeholder= "Enter your password" name="psw" required> <br><br><br>
+        
+                    <button type="submit" class="btn" onclick = 'validatephn()'>Login</button><br><br>
+                    <a href="#">Forgot password?</a>
+                </form>
+            </div>
+
+
+    <div class = "slidemovie-container">
+        <div class = "slidemovie">
+        <!--<div id = "#sl" class = "slider">
+                <div class="slide-content">
+                    <h1 class="movie-title">loki</h1>
+                    <h3 class="movie-duration">2022 ‧ Action/Adventure ‧ 1h 59m</h3>
+                    <p class="movie-des">  /p>
+                </div>
+                    <img src="images/slider 1.PNG" alt="">
+            </div>-->    
+        </div>
+    </div>
+    </div>
+    
+    <h1 class = "title">Latest & Trending</h1>
+    <div class = "movie-list">
+        <button class = "prev-button">&#10094;</button>
+        <button class = "next-button">&#10095;</button>
+        <div class = "card-container">
+            <div class = "card">
+                <img src = "brahmastra_shiva_poster_main.jpg" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Brahmastra</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "GunjanSakxena.jfif" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Gunjan Saxena</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "Sitaraman.jfif" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Sita Ramam</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "rrr.jfif" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">RRR</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "jurasic.jfif" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Jurassic World Dominion </h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "batman.jfif" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">The Batman</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "pushpa.jfif" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Pushpa</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "doctorstrange.jpg" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Doctor Strange</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "rakshabandhan.webp" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Rakshabandhan</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "jugjugjio.jfif" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Jug Jug Jiyo</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "bhoolbhulaiya.jfif" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Bhool Bhulaiyaa 2</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "ThankGod.jpg" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Thank God</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "shabash.jfif" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Shabaash Mithu</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "bullet.jfif" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Bullet Train</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1 class = "title">Popular</h1>
+    <div class = "movie-list">
+        <button class = "prev-button">&#10094;</button>
+        <button class = "next-button">&#10095;</button>
+        <div class = "card-container">
+            <div class = "card">
+                <img src = "3idiots.jfif" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">3 Idiots</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "Taarezameenpar.jfif" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Taare zameen Par</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "bajrani.jfif" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Bajrangi Bhaijaan</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "pk.jfif" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">PK</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "msdhoni.jfif" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Ms Dhoni:The Untold Story</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "uri.jfif" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Uri: The Surgical Strike</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "chichore.jfif" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Chhichhore</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "shershah.jfif" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Shershah</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "koimilgya.jfif" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Koi Mil Gaya</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "kesari.jfif" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Kesari</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "dhamaal.jpg" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Dhamaal</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "ramaiyanvastavaiya.jfif" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Ramaiya Vastavaiya</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "mohabbatein.jfif" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Mohabbatein</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "kashmirfiles.jpg" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">The Kashmir Files</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1 class = "title">Horror</h1>
+    <div class = "movie-list">
+        <button class = "prev-button">&#10094;</button>
+        <button class = "next-button">&#10095;</button>
+        <div class = "card-container">
+            <div class = "card">
+                <img src = "exorcist.jpg" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">The Exorcist</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "haunted.jfif" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Haunted</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "thenun.jpg" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">The Nun</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "1920london.jfif" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">1920 London</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "hereditary.jpg" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Hereditary</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "traintobusan.jpg" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Train To Busan</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "lightsout.jpg" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Lights Out</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "insidious.jpg" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Insidious</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "scream.jpg" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Scream</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "Pari.jpg" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Pari</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "it.jpg" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">It</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "Shaapit.jpg" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Shaapit</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "Chhorii.jpeg" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Chhorri</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+            <div class = "card">
+                <img src = "home.jpg" class="card-img" alt="">
+                <div class = "card-body">
+                    <h2 class ="name">Home</h2>
+                    <h6 class = "des">A young man on the brink of falling in love gets his...</h6>
+                    <button class = "watchlist-btn">+ add to watchlist</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class = "footer">
+        <div class = "footer-container"> 
+            <div class = "row">
+                <div class = "footer-col">
+                    <h4>About</h4>
+                </div>
+                <div class = "footer-col">
+                    <h4>Terms of policy</h4>
+                </div>
+                <div class = "footer-col">
+                    <h4>Privacy Policy</h4>
+                </div>
+                <div class = "footer-col">
+                    <h4>FAQ</h4>
+                </div>
+                <div class = "footer-col">
+                    <h4>Feedback</h4>
+                </div>
+                <div class = "footer-col">
+                    <h4>Careers</h4>
+                </div>
+                    <div class = "social-links">
+                        <h4 style = "color: #bbbbbb;">Connect with us</h4><br>
+                        <a href = "https://www.facebook.com/" target="_blank"><i class  = "fab fa-facebook-f"></i></a>
+                        <a href = "https://www.twitter.com/" target="_blank"><i class  = "fab fa-twitter"></i></a>
+                        <a href = "https://www.instagram.com/" target="_blank"><i class  = "fab fa-instagram"></i></a>
+                   </div>
+                   <div>
+                        <h4 style = "color: #bbbbbb;">© 2022 STAR. All Rights Reserved. HBO, Home Box Office and all related channel and programming logos are service marks of, and <br> all related programming visuals and elements are the property of, Home Box Office, Inc. All rights reserved.</h4>
+                    </div>
+            </div>
+        </div>
+    </footer>
+    <script src="movieproject.js"></script>
+</body>
+</html>                                      

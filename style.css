@@ -1,0 +1,511 @@
+* {
+    margin: 0;
+  }
+  
+  body {
+    background-color: black;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .navbar {
+    width: 100%;
+    height: 130px;
+    background-color: black;
+    position: sticky;
+    top: 0;
+  }
+  
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    height: 100%;
+    color: white;
+    font-family: "Sen", sans-serif;
+  }
+  
+  .logo-container {
+    flex: 1;
+  }
+  
+  .logo {
+    font-size: 35px;
+    text-align: center;
+    color: orangered;
+    font-weight: bold;
+    font-style:inherit;
+  }
+  
+  .menu-container {
+    flex: 6;
+  }
+  
+  .menu-list {
+    display: flex;
+    list-style: none;
+  }
+  
+  .list-value {
+    margin-right: 30px;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  
+  .list-value.active {
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  button {
+    border: none;
+    background-color:  #f44336;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    cursor: pointer;
+    padding: 10px 20px;
+  }
+
+  .featured-button:hover {
+    background-color:rgb(220, 97, 97);
+    color: white;
+  }
+   
+  .profile-container {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .search-box{
+      border: none;
+      border-bottom: 1px solid #aaa;
+      background: transparent; 
+      outline: none;
+      height: 30px;
+      color:#fff;
+      width: 250px;
+      text-transform: capitalize;
+      font-size: 20px;
+      font-weight: 500;
+      transition: .5s;
+}
+
+  .profile-text-container {
+    margin: 0 20px;
+  }
+  
+  .profile-picture {
+    width: 50px;
+    height: 100px;
+    border-radius: 100%;
+    object-fit: cover;
+  }
+  
+  .left-menu-icon {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  
+.slidemovie-container{
+  /*background-color: black;
+  height: 100vh;
+  color: white;*/
+  position: relative;
+  width: 100%;
+  height: 550px;
+  padding: 20px 0;
+  overflow-x: hidden;
+  margin-top: 10px;
+}
+
+.slidemovie{
+  /*margin-left: 50px;*/
+  display: flex;
+  width: 92%;
+  height: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.slider{
+  /*height: 50vh;*/
+  flex: 0 0 auto;
+  margin-right: 30px;
+  position: relative;
+  background: black;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  transition: 1s;
+  overflow: hidden;
+}
+
+.slider img {
+  width: 70%;
+  /*min-height: 20%;*/
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+}
+
+.slide-content{
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  z-index: 2;
+  background: linear-gradient(to right, #030b17 80%, #0c111b00);
+  color: #fff;
+
+}
+
+.movie-title{
+  padding-left: 50px;
+  text-transform: capitalize;
+  margin-top: 80px;
+} 
+
+.movie-duration{
+  width: 70%;
+  Line-height: 30px;
+  padding-Left: 50px;
+  margin-top: 30px;
+  opacity: 0.8; 
+}
+
+.movie-des{
+  width: 70%;
+  Line-height: 30px;
+  padding-Left: 50px;
+  margin-top: 30px;
+  opacity: 0.8; 
+}
+
+/*.video-card-container{
+  position: relative;
+  width: 92%;
+  margin: auto;
+  height: 10vw;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.video-card{
+  position: relative;
+  min-width: calc(100%/5-10px);
+  width: calc(100%/5-10px);
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  background: white;
+}*/
+
+.title{
+  color: white;
+  opacity: 0.9;
+  padding-left: 4%;
+  text-transform: capitalize;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.movie-list{
+  width: 100%;
+  height: 220px;
+  position: relative;
+  margin: 10px 0 20px;
+}
+
+.card-container{
+  position: absolute;
+  padding-left: 4%;
+  width: 92%;
+  height: 220px;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: visible;
+  scroll-behavior: smooth;
+}
+
+.card-container::-webkit-scrollbar{
+  display: none;
+}
+
+.card{
+  position: relative;
+  min-width: 150px;
+  width: 150px;
+  height: 200px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-right: 30px;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.card-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card:hover{
+  transform: scale(1.1);
+}
+
+.card:hover .card-body{
+  opacity: 1;
+}
+
+.card-body{
+opacity: 0;
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+Left: 0;
+z-index: 2;
+background: linear-gradient(to bottom, rgba(4, 8, 15, 0), #192133 90%);
+padding: 10px;
+transition: 0.5s;
+}
+
+.name{
+  color:#fff; 
+  font-size: 15px; 
+  font-weight: 500; 
+  text-transform: capitalize; 
+  margin-top: 60%; 
+} 
+.des{ 
+  color: #fff; 
+  opacity: 0.8; 
+  margin: 5px 0; 
+  font-weight: 500; 
+  font-size: 12px;
+}
+
+.watchlist-btn{ 
+  position: absolute; 
+  width: 100%;
+  font-size: 16px; 
+  text-transform: capitalize; 
+  background: none;
+  border: none; 
+  font-weight: 500; 
+  text-align: left; 
+  color:rgba(255,255, 255, 0.5); 
+  margin: 5px 0; 
+  cursor: pointer;
+  padding: 10px 5px;
+  border-radius: 5px;
+}
+
+.watchlist-btn::before{
+  content: '';
+  position: absolute;
+  top: 0; 
+  left: -5px;
+  height: 35px;
+  width: 35px;
+  /*background-image: url(add.png);*/
+  background-size: cover; 
+  transform: scale(0.10);
+}
+
+.watchlist-btn:hover{
+  color: #fff;
+  background: rgba(255,255,255,0.1);
+}
+
+.prev-button,
+.next-button{
+  position: absolute;
+  top: 0;
+  width: 5%;
+  font-size: 35px;
+  font-weight: 25px;
+  height: 100%;
+  z-index: 2;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  opacity: 0;
+}
+
+.prev-button{
+  left: 0;
+  background: linear-gradient(to right, #0c111b 0%, #0c111b00);
+}
+
+.next-button{
+  right: 0;
+  background: linear-gradient(to left, #0c111b 0%, #0c111b00);
+}
+
+.prev-button:hover,
+.next-button:hover{
+  opacity: 1;
+}
+
+
+
+/* The popup form - hidden by default */
+.form-popup {
+  border-radius: 10px;
+  display: none;
+  position: fixed;
+  margin-right: 100px;
+  margin-top: 50px;
+  left:50%;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.form-popup .close-btn{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  background: #888;
+  color:#eee;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 15px;
+  cursor: pointer;
+
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 500px;
+  height: 450px;
+  padding: 30px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], 
+.form-container input[type=password]{
+  width: 100%;
+  font-size: larger;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus,
+.form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+label{
+  font-size: 25px;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: Red;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover{
+  opacity: 1;
+}
+
+.form-container a{
+  display: block;
+  text-align: right;
+  font-size: 20px;
+  color: #1079ca;
+  font-weight: 600;
+}
+
+.footer-container{
+  max-width: 1600px;
+  margin:auto;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer{
+  background-color: rgb(27, 24, 24);
+  padding: 30px 0;
+}
+
+.footer-col{
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-col h4{
+  font: bold;
+  font-size: 18px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  position: relative;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-col h4:hover{
+  color: white;
+  padding-left: 8px;
+}
+
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.row .social-links a{
+  font-size: xx-large;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255,255,255,0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  padding: 10px;
+  border-radius: 50%;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.row .social-links a:hover{
+  color: #24262b;
+  background-color: white;
+}
+
